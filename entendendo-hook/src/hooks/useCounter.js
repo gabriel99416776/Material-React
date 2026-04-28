@@ -7,7 +7,7 @@ function getInitialValue(){
 
 
 export default function useCounter() {
-    // () => é usado para passar uma função de inicialização para o useState, garantindo que a função seja executada apenas na inicialização do componente, e não em cada renderização subsequente.
+    // () => é isso é uma função de inicialização preguiçosa, que só será executada na primeira renderização do componente. Isso é útil para evitar cálculos desnecessários em renderizações subsequentes, melhorando o desempenho do componente.
 const [count, setCount] = useState(() => getInitialValue())
 
 const increment = () => {
